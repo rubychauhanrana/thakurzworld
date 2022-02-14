@@ -1,0 +1,24 @@
+.topbar{
+	border-bottom:solid 1px gray;
+	height:50px;
+	padding-top:10px;
+	}
+	.phone-icon{
+	width:15px;
+	height:15px;
+	margin-left:20px;
+	}
+	.h1{
+	height:10px;
+	}
+   .card-img-top{
+   width:70px;
+   height:70px;
+  margin-left:20px;
+   }
+  strong{
+  color:rgb(0,33,71)
+  }
+  p{
+  color:gray;
+  }
