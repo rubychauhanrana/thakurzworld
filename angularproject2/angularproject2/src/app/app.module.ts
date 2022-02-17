@@ -14,6 +14,9 @@ import { OurClientsComponent } from './our-clients/our-clients.component';
 import { FeaturesComponent } from './features/features.component';
 import { BlogsComponent } from './blogs/blogs.component';
 import { FooterComponent } from './layout/footer/footer.component';
+import { ErrorComponent } from './error/error.component';
+import { OurBlogsComponent } from './our-blogs/our-blogs.component';
+import { HighlightsComponent } from './highlights/highlights.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import { FooterComponent } from './layout/footer/footer.component';
     ProductsComponent,
     OurClientsComponent,
     FeaturesComponent,
-    BlogsComponent
+    BlogsComponent,
+    ErrorComponent,
+    OurBlogsComponent,
+    HighlightsComponent
   ],
   imports: [
     BrowserModule,
