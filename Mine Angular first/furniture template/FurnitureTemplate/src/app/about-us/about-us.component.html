@@ -1,10 +1,10 @@
-<!-- About Start -->
-<div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+<!-- About Start
+<div class="container-fluid bg-light overflow-hidden my-5 px-lg-0" *ngIf = "userType == 'Admin'; else others">
     <div class="container about px-lg-0">
         <div class="row g-0 mx-lg-0">
             <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
                 <div class="position-relative h-100">
-                    <img class="position-absolute img-fluid w-100 h-100" src="/assets/img/about.jpg" style="object-fit: cover;" alt="">
+                    <img class="position-absolute img-fluid w-100 h-100" src="assets/img/about.jpg" style="object-fit: cover;" alt="">
                 </div>
             </div>
             <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
@@ -42,5 +42,34 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!-- About End -->
+
+<!-- <ng-template #others>
+    <div *ngFor = "let user of users">
+        <h2>{{user.name}} -- {{user.email}}</h2>
+    </div>
+</ng-template> -->
+
+<div class="container-fluid bg-light overflow-hidden my-5 px-lg-0" >
+    <div class="container about px-lg-0">
+        <table>
+            <thead>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Actions</th>
+            </thead> 
+            <tbody>
+                <tr *ngFor = 'let a of userData'>
+                    <td>{{a.id}}</td>
+                    <td>{{a.name}}</td>
+                    <td>{{a.email}}</td>
+                    <td>
+                        <a [routerLink]="['/layout/singleStudent', a.id]"> View Details</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -18,6 +18,14 @@ import { TestimonialComponent } from './testimonial/testimonial.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ContactComponent } from './contact/contact.component';
+
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { ToastrModule } from 'ngx-toastr';
+import { SingleUserComponent } from './single-user/single-user.component';
+
 
 @NgModule({
   declarations: [
@@ -35,13 +43,19 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     TeamMembersComponent,
     TestimonialComponent,
     DashboardComponent,
-    LoginComponent
+    LoginComponent,
+    ContactComponent,
+    SingleUserComponent,
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot(), // ToastrModule added
   ],
   providers: [],
   bootstrap: [AppComponent]
