@@ -24,4 +24,10 @@ export class UsersService {
     var headers = new HttpHeaders().set('Authorization', 'Bearer ' + this.token)
     return this.http.get(this.base + '/getStudentById/' + id, {headers: headers})
   }
+
+  deleteUser(id:any){
+    var headers = new HttpHeaders().set('Authorization', 'Bearer ' + this.token)
+    return this.http.delete(this.base + '/deleteStudent/' + id, {headers: headers})
+  }
+
 }

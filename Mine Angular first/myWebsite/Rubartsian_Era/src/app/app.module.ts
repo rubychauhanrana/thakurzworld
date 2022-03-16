@@ -23,6 +23,10 @@ import { ToastrModule } from 'ngx-toastr';
 import { LoginComponent } from './login/login.component';
 import { ListUsersComponent } from './list-users/list-users.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
+import { SingleuserComponent } from './singleuser/singleuser.component';
+import { DeleteUserComponent } from './delete-user/delete-user.component';
+import { BrandComponent } from './brand/brand.component';
+import { UpdateUserComponent } from './users/update-user/update-user.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +45,11 @@ import { DropdownComponent } from './dropdown/dropdown.component';
     ContactComponent,
     LoginComponent,
     ListUsersComponent,
-    DropdownComponent
+    DropdownComponent,
+    SingleuserComponent,
+    DeleteUserComponent,
+    BrandComponent,
+    UpdateUserComponent
   ],
   imports: [
     BrowserModule,

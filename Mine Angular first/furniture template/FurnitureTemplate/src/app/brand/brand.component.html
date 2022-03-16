@@ -1,0 +1,20 @@
+<form [formGroup]="brandForm" (submit) = "submit()">
+    <input type="text" placeholder="Enter brand name" formControlName = "brand_name"> <br>
+    <input type="file" (change) = "fileUpload($event)" >
+    <button type="submit">Add Brand</button>
+</form>
+
+<table>
+    <thead>
+        <tr>
+        <th>Brand Name</th>
+        <th>Brand Image</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let a of brandData">
+            <td>{{a.brand_name}}</td>
+            <td><img [src]="base+a.brand_logo" alt=""></td>
+        </tr>
+    </tbody>
+</table>

@@ -9,11 +9,12 @@ export class AuthGuardServivesService {
 
   Constructor() { }
   SetData (data:any){
-    console.log(data)
+    // console.log(data.token)
     sessionStorage.setItem ('token',data.token)
     sessionStorage.setItem ('name',data.data.name)
   }
   getToken(){
+    console.log(sessionStorage.getItem('token'))
     return sessionStorage.getItem('token')
   }
   getName(){

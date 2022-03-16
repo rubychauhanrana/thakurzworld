@@ -1,0 +1,28 @@
+<div class="p-2">
+    <!-- <form [formGroup]="userForm" (ngSubmit)="submit()">
+        <input type="text" formControlName = "name">
+        <input type="email" formControlName = "email">
+        <button type="submit">Submit</button>
+    </form> -->
+    <form [formGroup]="userForm" (submit) = "submit()">
+        <input type="text" placeholder="Enter user name" formControlName = "name"> <br>
+        <input type="email" formControlName = "email" >
+        <button type="submit">Update USer</button>
+    </form>
+</div>
+
+<div class="row">
+    <div class="image col-lg-4 d-flex align-items-stretch justify-content-center justify-content-lg-start"></div>
+    <div class="col-lg-8 d-flex flex-column align-items-stretch">
+      <div class="content ps-lg-4 d-flex flex-column justify-content-center">
+        <div class="row">
+          <div class="col-lg-6">
+            <form [formGroup]="userForm" (submit) = "submit()">
+                <input type="text" placeholder="Enter user name" formControlName = "name"> <br>
+                <!-- <input type="text" placeholder="Enter user name" formControlName = "password"> <br> -->
+                <input type="email" formControlName = "email" >
+                <button type="submit">Update USer</button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactComponent } from './contact/contact.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { DeleteUserComponent } from './delete-user/delete-user.component';
 import { FeaturesImageComponent } from './features-image/features-image.component';
 import { LayoutComponent } from './layout/layout.component';
 import { LoginComponent } from './login/login.component';
@@ -16,6 +17,7 @@ const routes: Routes = [
  {path: 'home', component: DashboardComponent},
   {path: 'about', component: AboutUsComponent},
   { path: 'singleStudent/:id', component: SingleUserComponent},
+  { path: 'deleteStudent/:id', component: DeleteUserComponent},
   {path: 'services', component:OurServicesComponent},
   {path: 'project', component: OurProjectsComponent},
   {path: 'pages', component: FeaturesImageComponent},

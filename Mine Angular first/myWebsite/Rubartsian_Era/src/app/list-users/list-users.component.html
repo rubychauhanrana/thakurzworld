@@ -36,12 +36,14 @@
                     <th>Action</th>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let a of userData">
+                    <tr *ngFor = 'let a of userData'>
                         <td>{{a.id}}</td>
                         <td>{{a.name}}</td>
                         <td>{{a.email}}</td>
                         <td>
-                            <a><div routerLink="['/layout/singlestudent', a.id]"></div>View Detils</a>
+                            <a [routerLink]="['/layout/singleUser', a.id]">View Details</a>
+                            <a [routerLink]="['/layout/updateUser', a.id]">Update Details</a>
+                            <a [routerLink]="['/layout/deleteUser', a.id]" *ngIf = "!(a.id == 54)">Delete</a>
                         </td>
                     </tr>
                 </tbody>

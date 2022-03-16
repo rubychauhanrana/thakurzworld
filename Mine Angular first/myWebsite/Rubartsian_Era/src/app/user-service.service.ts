@@ -23,6 +23,16 @@ export class UserServiceService {
     var headers = new HttpHeaders().set('Authorization', 'Bearer ' + this.Token)
     return this.http.get(this.base + '/getStudentById/' + id, {headers: headers})
   }
+  deleteUser(id:any){
+    var headers = new HttpHeaders().set('Authorization', 'Bearer ' + this.Token)
+    return this.http.delete(this.base + '/deleteStudent/' + id, {headers: headers})
+  }
+
+  updateUser(data:any, id:any){
+    var headers = new HttpHeaders().set('Authorization', 'Bearer ' + this.Token)
+    return this.http.post(this.base + '/updateStudent/' + id, data, {headers: headers})
+  }
+
 }
 
 //   gettoken(): any {

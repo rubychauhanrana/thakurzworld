@@ -25,7 +25,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ToastrModule } from 'ngx-toastr';
 import { SingleUserComponent } from './single-user/single-user.component';
-
+import { DeleteUserComponent } from './delete-user/delete-user.component';
+import { BrandComponent } from './brand/brand.component';
+// angular.module('yourApp',[   'ng-sweet-alert' ]); 
 
 @NgModule({
   declarations: [
@@ -46,6 +48,8 @@ import { SingleUserComponent } from './single-user/single-user.component';
     LoginComponent,
     ContactComponent,
     SingleUserComponent,
+    DeleteUserComponent,
+    BrandComponent,
    
   ],
   imports: [
@@ -56,6 +60,7 @@ import { SingleUserComponent } from './single-user/single-user.component';
     HttpClientModule,
     BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot(), // ToastrModule added
+
   ],
   providers: [],
   bootstrap: [AppComponent]
