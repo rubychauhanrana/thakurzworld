@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
+import { BrandService } from '../brand.service';
 
 @Component({
   selector: 'app-brand',
@@ -6,6 +9,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./brand.component.css']
 })
 export class BrandComponent implements OnInit {
+
+  base:any
+  brandData:any
+
   brandForm = new FormGroup({
     brand_name: new FormControl(''),
     brand_logo: new FormControl('')

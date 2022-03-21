@@ -67,7 +67,7 @@
                     <td>{{a.email}}</td>
                     <td>
                         <a [routerLink]="['/layout/singleStudent', a.id]"> View </a>
-                        <a [routerLink]="['/layout/deleteStudent', a.id]" *ngIf = "!(a.id == 54)">Delete</a>
+                        <span *ngIf = "!(a.id == 54)" (click) = openDialog(a.id)>Delete</span>
                     </td>
                 </tr>
             </tbody>

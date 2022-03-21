@@ -27,6 +27,8 @@ import { ToastrModule } from 'ngx-toastr';
 import { SingleUserComponent } from './single-user/single-user.component';
 import { DeleteUserComponent } from './delete-user/delete-user.component';
 import { BrandComponent } from './brand/brand.component';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+import { NgxSpinnerModule } from 'ngx-spinner';
 // angular.module('yourApp',[   'ng-sweet-alert' ]); 
 
 @NgModule({
@@ -49,7 +51,7 @@ import { BrandComponent } from './brand/brand.component';
     ContactComponent,
     SingleUserComponent,
     DeleteUserComponent,
-    BrandComponent,
+    // BrandComponent,
    
   ],
   imports: [
@@ -60,6 +62,9 @@ import { BrandComponent } from './brand/brand.component';
     HttpClientModule,
     BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot(), // ToastrModule added
+    SweetAlert2Module.forRoot(),
+    NgxSpinnerModule,
+    BrowserAnimationsModule
 
   ],
   providers: [],
