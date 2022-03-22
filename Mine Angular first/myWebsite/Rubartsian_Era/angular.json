@@ -42,8 +42,8 @@
               "src/assets/assets/vendor/swiper/swiper-bundle.min.js",
               "src/assets/assets/vendor/waypoints/noframework.waypoints.js",
               "src/assets/assets/vendor/php-email-form/validate.js",
-              "src/assets/assets/js/main.js"
-
+              "src/assets/assets/js/main.js",
+              "node_modules/ngx-spinner/animations/ball-scale-multiple.css" 
             ]
           },
           "configurations": {
@@ -114,7 +114,8 @@
               "src/assets/assets/vendor/boxicons/css/boxicons.min.css",
               "src/assets/assets/vendor/glightbox/css/glightbox.min.css",
               "src/assets/assets/vendor/swiper/swiper-bundle.min.css",
-              "src/assets/assets/css/style.css"
+              "src/assets/assets/css/style.css",
+              "node_modules/ngx-spinner/animations/ball-scale-multiple.css" 
             ],
             "scripts": [
               "src/assets/assets/vendor/purecounter/purecounter.js",

@@ -10,6 +10,7 @@ import { AuthGuardServiceService } from '../services/auth/auth-guard-service.ser
 export class DashboardComponent implements OnInit {
 
   token:any = ''
+  
   constructor(private _authService: AuthGuardServiceService, private route: Router) { }
 
   ngOnInit(): void {

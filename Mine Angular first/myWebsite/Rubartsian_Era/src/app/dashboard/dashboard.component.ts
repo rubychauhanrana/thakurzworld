@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { throws } from 'assert';
+import { AuthGuardServivesService } from '../auth-guard.servives.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -6,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+  token:any=''
+  route: any;
 
-  constructor() { }
+
+  constructor(private _authService:AuthGuardServivesService) { }
 
   ngOnInit(): void {
+    this.token=this._authService.getToken()
+    if(this.token! ==null){
+      this.route.navigateByurl('')
+    }
   }
 
 }

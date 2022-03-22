@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { NgxSpinnerService } from 'ngx-spinner';
 import { ToastrService } from 'ngx-toastr';
 import { AuthGuardServivesService } from '../auth-guard.servives.service';
 import { LoginServiceService } from '../servives/login/login-service.service';
@@ -18,7 +19,7 @@ export class LoginComponent implements OnInit {
   })
 
 
-  constructor(private route: Router, private _loginService: LoginServiceService, private toastr: ToastrService, private _authService: AuthGuardServivesService) { }
+  constructor(private route: Router, private _loginService: LoginServiceService, private toastr: ToastrService, private _authService: AuthGuardServivesService,private Spinner : NgxSpinnerService){ }
 
   ngOnInit(): void {
   }
@@ -45,6 +46,7 @@ export class LoginComponent implements OnInit {
       }
     },
     err =>{
+      this.Spinner.hide()
       console.log(err)
     }
   )

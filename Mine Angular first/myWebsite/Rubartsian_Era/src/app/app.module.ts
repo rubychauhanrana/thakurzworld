@@ -27,6 +27,9 @@ import { SingleuserComponent } from './singleuser/singleuser.component';
 import { DeleteUserComponent } from './delete-user/delete-user.component';
 import { BrandComponent } from './brand/brand.component';
 import { UpdateUserComponent } from './users/update-user/update-user.component';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+import { NgxSpinnerComponent, NgxSpinnerModule } from 'ngx-spinner';
+
 
 @NgModule({
   declarations: [
@@ -49,7 +52,8 @@ import { UpdateUserComponent } from './users/update-user/update-user.component';
     SingleuserComponent,
     DeleteUserComponent,
     BrandComponent,
-    UpdateUserComponent
+    UpdateUserComponent,
+   
   ],
   imports: [
     BrowserModule,
@@ -58,6 +62,9 @@ import { UpdateUserComponent } from './users/update-user/update-user.component';
     HttpClientModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
+    SweetAlert2Module.forRoot(),
+  NgxSpinnerModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
