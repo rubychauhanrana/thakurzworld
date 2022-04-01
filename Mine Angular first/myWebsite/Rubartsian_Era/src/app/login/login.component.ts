@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { NgxSpinnerService } from 'ngx-spinner';
+import { NgxSpinner, NgxSpinnerService } from 'ngx-spinner';
 import { ToastrService } from 'ngx-toastr';
 import { AuthGuardServivesService } from '../auth-guard.servives.service';
 import { LoginServiceService } from '../servives/login/login-service.service';
@@ -24,6 +24,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
   submit(){
+    this.Spinner.show()
     // console.log(this.loginForm.value)
   //   if (this.loginForm.value.email == "o7services@gmail.com" && this.loginForm.value.password == "o7services")
   //   {
@@ -34,7 +35,7 @@ export class LoginComponent implements OnInit {
 
   this._loginService.useLogin(this.loginForm.value).subscribe(
     (res:any) =>{
-      
+      this.Spinner.hide()
       console.log(res)
       if (res.response.status){
         this.toastr.success('Login Successfully', 'Success')
